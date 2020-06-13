@@ -1,5 +1,4 @@
 django
 requests
 djangorestframework
-codecov
-pytest-cov
+coveralls
