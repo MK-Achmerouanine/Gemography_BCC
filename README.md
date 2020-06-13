@@ -10,6 +10,8 @@
 
 [![Build Status](https://travis-ci.org/MK-Achmerouanine/Gemography_BCC.svg?branch=master)](https://travis-ci.org/MK-Achmerouanine/Gemography_BCC)
 
+[![Coverage Status](https://coveralls.io/repos/github/MK-Achmerouanine/Gemography_BCC/badge.svg?branch=master)](https://coveralls.io/github/MK-Achmerouanine/Gemography_BCC?branch=master)
+
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ## Run in local machine
