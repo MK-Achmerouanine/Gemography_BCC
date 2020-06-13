@@ -5,3 +5,8 @@ install: pip install -r requirements.txt
 script:
   - python manage.py test apps.repostrend.tests
   - codecov
+[testenv]
+passenv =
+  CI
+  TRAVIS
+  TRAVIS_*
