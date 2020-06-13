@@ -12,8 +12,14 @@ class RepoTrend(TestCase):
         order = 'desc'
         page = '1'
         per_page = '100'
-        self.git_response = requests.get(url.format(date, sort, order, page, per_page)).json()
+        self.git_response = requests.get(url.format(
+            date, sort, order, page, per_page)).json()
 
     def test_receiving_items(self):
         """Check if we receive 100 items as expected """
         self.assertEqual(len(self.git_response['items']), 100)
+
+    def test_check_results(self):
+        """Check if we get no errors in our view"""
+        response = self.client.get('')
+        self.assertEqual(response.status_code, 200)

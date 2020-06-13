@@ -16,4 +16,30 @@ def index(request):
     per_page = '100'
     r = requests.get(url.format(date, sort, order, page, per_page)).json()
     items = r['items']
-    return Response(items)
+    languages = []
+    counts = {}
+    repos = {}
+    for item in items:
+        if item['language'] not in languages and item['language'] is not None:
+            lang = item['language']
+            languages.append(item['language'])
+            counts[lang] = 1
+            repos[lang] = [item]
+        else:
+            if item['language'] in languages and item['language'] is not None:
+                lang = item['language']
+                counts[lang] += 1
+                repos[lang].append(item)
+            else:
+                if item['language'] == 'None':
+                    if item['language'] not in languages:
+                        languages.append(item['language'])
+
+                    lang = item['language']
+                    counts[lang] += 1
+                    repos[lang].append(item)
+    results = []
+    for lang in languages:
+        results.append(
+            {'language': lang, 'count': counts[lang], 'repos': repos[lang]})
+    return Response(results)
