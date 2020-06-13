@@ -1,6 +1,6 @@
 # Gemography Backend Coding Challenge
 
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django?style=flat-square)](https://GitHub.com/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django?style=flat-square)](https://www.python.org/downloads/)
 
 [![PyPI](https://img.shields.io/pypi/v/django?label=Django)](https://www.djangoproject.com)
 
@@ -19,49 +19,68 @@ First make sure you have python3 installed in your local machine, if you don't p
 ### Clone this repository
 
 - let's clone this repository using this command
-  > \$ git clone
+
+```bash
+  $ git clone https://github.com/MK-Achmerouanine/Gemography_BCC.git
+```
 
 ### Configure virtual environement
 
 - let's create a virtual environement using this command:
 
-  > $ py -3 -m venv .venv
+```bash
+$ py -3 -m venv .venv
 Or
-> $ python3 -m venv .venv
+$ python3 -m venv .venv
+```
 
 - Activate the environement using the following command (Linux & Mac Os):
-  > \$ source .venv/bin/activate
+
+```bash
+$ source .venv/bin/activate
+```
+
 - Activate the environement using the following command (Windows):
-  > \$ .venv\Scripts/activate
+
+```bash
+$ .venv\Scripts\activate
+```
 
 ### Install dependencys
 
 - Install the dependencys using the following command:
-  > \$ pip3 install -r requirements.txt
+
+```bash
+pip3 install -r requirements.txt
+```
 
 ### Run Project
 
 - To start project run the following command:
 
-  > \$ python manage.py runserver
+```bash
+$ python manage.py runserver
+```
 
-- After starting the server successifuly you can check the results here :
-  > [http://localhost:8000/]
+> After starting the server successifuly you can check the results here : [http://localhost:8000/]
 
-### Test Project
+### Unit tests
 
 - To test the project run the following command:
-  > \$ python manage.py test apps.repotrend.tests
+
+```bash
+$ python manage.py test apps.repotrend.tests
+```
 
 ## Run on docker
 
 First make sure you installed docker on your machine.
 
-> \$ docker-compose up
+```bash
+$ docker-compose up
+```
 
 ## Tasks
 
 - [x] Number of repos using this language
 - [x] The list of repos using the language
-- [x] this is a complete item
-- [ ] CI/CD Pipelines

@@ -4,6 +4,6 @@ python:
 install: pip install -r requirements.txt
 script:
   - python manage.py test apps.repostrend.tests
-  - coverage run --source=apps/repostrend manage.py test test apps/repostrend
+  - coverage run --source=apps/repostrend manage.py test apps/repostrend
 
 after_success: coveralls
